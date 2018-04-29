@@ -10,7 +10,7 @@ a posterior probabily of vehicles position in a map is computed using a genetic 
 [//]: # (Image References) 
 [image1]: ./images/ParticleFilters_Schematic.png
 [image2]: ./images/ParticleFilters_Algorithm.png
-[image2]: ./images/Results.png
+[image3]: ./images/Results.png
 
 Use of Particle filters for Robot motion and localization is described here: 
 http://robots.stanford.edu/papers/thrun.pf-in-robotics-uai02.pdf
