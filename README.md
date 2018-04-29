@@ -1,40 +1,34 @@
-# Unscented Kalman Filters
+# Particle Filters
 
-Extended Kalman filters were quite useful to track an object that typically has linear motion. In EKF, object's state distribution is approximated by a Gaussian
-Random Variable. When such a Gaussian random variable is mapped to a non-linear function, then the result is no longer a Gaussian distribution. Hence Extended
-Kalman Filters use Taylor series to linearize the non-linear function. It has been shown that this can introduce large errors in the posterior mean and covariance
-of the transformed Gaussian random variable. Unscented Kalman Filters overcome this limitation by choosing sample points that completely capture the true mean and
-covariance of the Gaussian random variable which are accurate up to 3rd order of Taylor series exapansion. More details of the idea and implementation can be found
-in the original paper.
+Particle Filters are a non-parameteric filters and can operate efficiently in multi-modal continuous sate space.
+Using an initial random guess of the particles, Particle filters improve the accuracy by sampling the particles in such a 
+way that the most likely particles survive during sampling and contribute to better estimate over time. Particle filters are 
+useful in applications such as localizing a vehicle using its noisy GPS measurements of landmark points , 
+a posterior probabily of vehicles position in a map is computed using a genetic mutation-selection sampling approach.
+
 
 [//]: # (Image References) 
-[image1]: ./images/UKF_Roadmap.png
-[image2]: ./images/UKF_Viz_DS1.png
-[image3]: ./images/UKF_Viz_DS2.png
-[image4]: ./images/Results.png
+[image1]: ./images/ParticleFilters_Schematic.png
+[image2]: ./images/ParticleFilters_Algorithm.png
+[image2]: ./images/Results.png
 
-Original paper is described here: https://www.seas.harvard.edu/courses/cs281/papers/unscented.pdf
+Use of Particle filters for Robot motion and localization is described here: 
+http://robots.stanford.edu/papers/thrun.pf-in-robotics-uai02.pdf
 
-### UKF Road Map
+### Particle Filters - Process
 
 ![alt text][image1]
 
 ---
 
-### Results
-
-#### Graph for Dataset 1
+### Particle Filters - Algorithm
 
 ![alt text][image2]
 
+---
 
-#### Graph for Dataset 2
+### Results
 
 ![alt text][image3]
 
----
-
-#### RMSE
-
-![alt text][image4]
 
